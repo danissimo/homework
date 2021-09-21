@@ -19,17 +19,7 @@ public class Main {
 //        вывести(вернуть) Хорошеего утро;
         Scanner scanner = new Scanner(System.in);
         int hour = scanner.nextInt();
-        if (hour > 24 || hour < 0) {
-            System.out.println("Время неверное!");
-        } else if (hour > 21 || hour < 6) {
-            System.out.println("Спокойной ночи");
-        } else if (hour >= 15) {
-            System.out.println("Хорошего вечера!");
-        } else if (hour >= 11) {
-            System.out.println("Хорошего дня!");
-        } else {
-            System.out.println("Доброе утро!");
-        }
+        printTime(hour);
 
 //        Задание 2
 //        int year = 1985;
@@ -79,5 +69,24 @@ public class Main {
         String str = x == y ? "Числа равны" : "Числа не равны";
         System.out.println(str);
     }
-}
 
+    static void printTime(int hour) {
+        if (hour > 24 || hour < 0) {
+            System.out.println("Время неверное!");
+            return;
+        }
+        if (hour > 21 || hour < 6) {
+            System.out.println("Спокойной ночи");
+            return;
+        }
+        if (hour >= 15) {
+            System.out.println("Хорошего вечера!");
+            return;
+        }
+        if (hour >= 11) {
+            System.out.println("Хорошего дня!");
+            return;
+        }
+        System.out.println("Доброе утро!");
+    }
+}
