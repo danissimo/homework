@@ -30,25 +30,11 @@ public class CatFeeder {
     static int[] catsFeeders = new int[7];
     static Scanner scanner = new Scanner(System.in);
 
-// static int sc = scanner.nextInt();
-// static int foodCount = scanner.nextInt();
-// static int catNumber = scanner.nextInt();
-
     public static void main(String[] args) {
         menu();
-// for (int personInput = scanner.nextInt(); personInput != 666; menu()) {
-// printAllCatsFood();
-// }
     }
 
     private static void menu() {
-        /* 1. Показать меню действий
-         * 2. Получить ввод пользователя
-         * 3. Вызвать команду
-         * 4. Вывести результат команды (у кого сколько корма)
-         * 5. Зациклить с 1-4 пункт, пока пользователь не выйдет из программы
-         * */
-
         do {
             System.out.println("Что будем делать?" +
                     "\n 1 - Накормим одного кота;" +
@@ -94,24 +80,10 @@ public class CatFeeder {
             }
         } while (true);
     }
-// printAllCatsFood();
-//// menu(sc, foodCount, catNumber);
-// menu();
-// }
-
-    // public static void scanners() {
-// int sc = scanner.nextInt();
-// int foodCount = scanner.nextInt();
-// int catNumber = scanner.nextInt();
-// }
 
     private static void feedAllCatsCompletely() {
 
         Arrays.fill(catsFeeders, 7);
-//        Эквивалентный код:
-//        for (int i = 0; i < catsFeeders.length; i++) {
-//            catsFeeders[i] = 7;
-//        }
         System.out.println("Все котики сыты:)");
     }
 
