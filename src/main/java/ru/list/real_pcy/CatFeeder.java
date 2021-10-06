@@ -1,5 +1,6 @@
 package ru.list.real_pcy;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -54,6 +55,7 @@ public class CatFeeder {
                     "\n 2 - Накормим всех котов;" +
                     "\n 3 - Накормим чётных котов;" +
                     "\n 4 - Накормим нечётных котов;" +
+                    "\n 5 - Накормим всех полностью и сразу;" +
                     "\n 666 - Выйти");
             switch (scanner.nextInt()) {
                 case 1:
@@ -79,6 +81,10 @@ public class CatFeeder {
                     feedOddAndNonOddCats(scanner.nextInt(), false);
                     printAllCatsFood();
                     break;
+                case 5:
+                    feedAllCatsCompletely();
+                    printAllCatsFood();
+                    break;
                 default:
                     System.out.println("Неверный набор!");
                     break;
@@ -93,11 +99,21 @@ public class CatFeeder {
 // menu();
 // }
 
-// public static void scanners() {
+    // public static void scanners() {
 // int sc = scanner.nextInt();
 // int foodCount = scanner.nextInt();
 // int catNumber = scanner.nextInt();
 // }
+
+    private static void feedAllCatsCompletely() {
+
+        Arrays.fill(catsFeeders, 7);
+//        Эквивалентный код:
+//        for (int i = 0; i < catsFeeders.length; i++) {
+//            catsFeeders[i] = 7;
+//        }
+        System.out.println("Все котики сыты:)");
+    }
 
     private static void feedOddAndNonOddCats(int foodCount, boolean isEven) {
         if (isEven) {
@@ -133,8 +149,10 @@ public class CatFeeder {
 
 
     private static void printAllCatsFood() {
+        System.out.println();
         for (int i = 0; i < catsFeeders.length; i++) {
             System.out.println("У кота " + catsName[i] + " в миске " + catsFeeders[i] + " еды.");
         }
+        System.out.println();
     }
 }
