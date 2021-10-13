@@ -13,10 +13,10 @@ package ru.list.real_pcy.homework_oop;
 
 public class Person {
 
-    public String name;
-    public int age;
-    public double salary;
-    public String companyName = "Google";
+    private String name;
+    private int age;
+    private double salary;
+    private String companyName = "Google";
 
     //Конструктор
 //    public Person(String name, int age, double salary, String companyName) {

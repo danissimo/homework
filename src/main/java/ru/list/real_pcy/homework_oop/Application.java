@@ -1,21 +1,17 @@
 package ru.list.real_pcy.homework_oop;
 
-import java.util.Arrays;
-
 public class Application {
 
     public static void main(String[] args) {
         //Alex
         Person alex = new Person();
-        Company company = new Company();
-
         alex.setName("Alex");
         alex.setAge(78);
 //        alex.setSalary();
         alex.setCompanyName("Nivea");
         System.out.println(alex.getCompanyName());
 
-        alex.salaryValidate();
+//        alex.salaryValidate();
 
         //Bob
         Person bob = new Person();
@@ -25,9 +21,22 @@ public class Application {
         System.out.println(bob.getCompanyName());
 
         //Company
-        company.addPersonToWork("Oz");
-        company.addPersonToWork("Nick");
-        company.addPersonToWork("Cole");
-        company.print();
+        Company company = new Company();
+//        company.addPersonToWork("Oz");
+//        company.addPersonToWork("Nick");
+//        company.addPersonToWork("Cole");
+//        company.print();
+
+//        company.firePerson();
+//        company.hirePerson(alex);
+        company.setArrayWorkers(new Person[0]);
+        company.setName("TwinkoOff");
+        company.addNewWorker(bob);
+        company.addNewWorker(alex);
+        company.printAllWorkers();
+        System.out.println(alex.getCompanyName());
+
+        company.deleteWorker(bob);
+        company.printAllWorkers();
     }
 }
