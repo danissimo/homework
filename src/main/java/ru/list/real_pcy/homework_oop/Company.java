@@ -34,6 +34,7 @@ public class Company {
         arrayWorkers[arrayWorkers.length - 1] = newWorker;
         newWorker.setCompanyName(this.name);
     }
+//TODO при увольнении у сотрудника менять companyName
 
     public void deleteWorker(Person firedWorker) {
         Person[] newArrayWorkers = new Person[arrayWorkers.length - 1];
@@ -47,9 +48,13 @@ public class Company {
         arrayWorkers = newArrayWorkers;
     }
 
+        public int getLength () {
+        return arrayWorkers.length;
+        }
 
         public void printAllWorkers () {
-            for (Person s : arrayWorkers) {
+            for (int i = 0; i < arrayWorkers.length; i++) {
+                Person s = arrayWorkers[i];
                 System.out.println(s.getName());
             }
         }
@@ -74,18 +79,18 @@ public class Company {
 
         // endregion
         // region collection
-        ArrayList<String> arrayList = new ArrayList<>();
-
-        public void addPersonToWork (String name){
-            arrayList.add(name);
-        }
-
-        public void print () {
-            //iter
-            for (String s : arrayList) {
-                System.out.println(s);
-//        System.out.println(arrayList);
-            }
-        }
+//        ArrayList<String> arrayList = new ArrayList<>();
+//
+//        public void addPersonToWork (String name){
+//            arrayList.add(name);
+//        }
+//
+//        public void print () {
+//            //iter
+//            for (String s : arrayList) {
+//                System.out.println(s);
+////        System.out.println(arrayList);
+//            }
+//        }
         // endregion
     }

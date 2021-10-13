@@ -37,6 +37,7 @@ public class Application {
         System.out.println(alex.getCompanyName());
 
         company.deleteWorker(bob);
+        System.out.println(company.getLength());
         company.printAllWorkers();
     }
 }
